@@ -35,8 +35,8 @@ const startScanner = () => {
                 codeRepetition: true,
                 tryVertical: true,
                 frameRate: 15,
-                width: 1600,
-                height: 1200,
+                width: 800,
+                height: 600,
                 facingMode: "environment"
             },
         },
@@ -103,7 +103,7 @@ const startScanner = () => {
 
     //barcode read call back
     Quagga.onDetected(function (result) {
-        document.getElementById(id).value = result.codeResult.code;
+        document.getElementById("scaned_code").value = result.codeResult.code;
         console.log(result.codeResult.code);
     });
   }
