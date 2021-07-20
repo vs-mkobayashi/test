@@ -98,7 +98,7 @@
     });
   }
 </script>
-<script type="text/javascript" src="https://serratus.github.io/quaggaJS/dist/quagga.min.js"></script>
+<script type="text/javascript" src="https://serratus.github.io/quaggaJS/examples/js/quagga.js"></script>
 
 <h> barcode reader </h>
 <div id="photo-area" class="viewport"></div>
