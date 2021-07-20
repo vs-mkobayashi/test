@@ -30,20 +30,11 @@ const startScanner = () => {
             type: "LiveStream",
             target: document.querySelector('#photo-area'),
             constraints: {
-                decodeBarCodeRate: 3,
-                successTimeout: 500,
-                codeRepetition: true,
-                tryVertical: true,
-                frameRate: 15,
-                width: 800,
-                height: 600,
                 facingMode: "environment"
             },
         },
         decoder: {
-            readers: [
-                "i2of5_reader"
-            ]
+            readers: ["ean_reader", "ean_8_reader"]
         },
 
     }, function (err) {
@@ -105,6 +96,7 @@ const startScanner = () => {
     Quagga.onDetected(function (result) {
         document.getElementById("scaned_code").value = result.codeResult.code;
         console.log(result.codeResult.code);
+        this.Quagga.stop();
     });
   }
 </script>
