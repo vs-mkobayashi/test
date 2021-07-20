@@ -109,6 +109,7 @@ window.onload = () => {
 　　　　});
 };
 </script>
+<script type="text/javascript" src="https://serratus.github.io/quaggaJS/examples/js/quagga.min.js"></script>
 
 <h> test </h>
 <input type="button" value="button" onclick="buttonClick()">
