@@ -17,7 +17,7 @@
         localStream = mediaStream;
 	console.log(document.querySelector("video"));
 	console.log(mediaStream);
-        localVideo.srcObject = mediaStream;
+        localVideo.srcObject = localStream;
 	window.alert("button 1　OK");
     }
 
