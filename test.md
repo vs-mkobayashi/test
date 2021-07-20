@@ -100,13 +100,13 @@ window.onload = () => {
 
 　　　　$("#save").on( "click", function(){
 　　　　　　　　var jpeg = canvas.toDataURL("image/jpeg");      // JPEG
-    console.log(jpeg);
+　　　　　　　　console.log(jpeg);
 　　　　　　　　var download = $("<a></a>").appendTo("body").css("display","none");
 　　　　　　　　download.prop({"href" : jpeg, "download": "canvas.jpg" });
-    console.log(download);
+　　　　　　　　console.log(download);
 　　　　　　　　download.get(0).click();
 　　　　　　　　download.remove();
-  }
+　　　　}
 };
 </script>
 
