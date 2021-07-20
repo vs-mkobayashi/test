@@ -90,11 +90,23 @@ window.onload = () => {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     // save
     var jpeg = canvas.toDataURL("image/jpeg")       // JPEG
+    console.log(jpeg);
     var download = $("<a></a>").appendTo("body").css("display","none");
     download.prop({"href" : jpeg, "download": "canvas.jpg" });
+    console.log(download);
     download.get(0).click();
     download.remove();
   });
+
+　　　　$("#save").on( "click", function(){
+　　　　　　　　var jpeg = canvas.toDataURL("image/jpeg")       // JPEG
+    console.log(jpeg);
+　　　　　　　　var download = $("<a></a>").appendTo("body").css("display","none");
+　　　　　　　　download.prop({"href" : jpeg, "download": "canvas.jpg" });
+    console.log(download);
+　　　　　　　　download.get(0).click();
+　　　　　　　　download.remove();
+  }
 };
 </script>
 
@@ -111,4 +123,4 @@ window.onload = () => {
 <form>
   <button type="button" id="shutter">シャッター</button>
 </form>
-
+<input id="save" type="button" value="save">
