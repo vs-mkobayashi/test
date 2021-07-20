@@ -103,7 +103,7 @@ const startScanner = () => {
 
     //barcode read call back
     Quagga.onDetected(function (result) {
-        
+        document.getElementById(id).value = result.codeResult.code;
         console.log(result.codeResult.code);
     });
   }
@@ -113,4 +113,4 @@ const startScanner = () => {
 <div id="photo-area" class="viewport"></div>
 
 <video id="camera" width="300" height="200"></video>
-code: <input type="text" value="" readonly>
+code: <input id="scaned_code" type="text" value="" readonly>
