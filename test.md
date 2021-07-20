@@ -106,7 +106,7 @@ window.onload = () => {
 　　　　　　　　console.log(download);
 　　　　　　　　download.get(0).click();
 　　　　　　　　download.remove();
-　　　　}
+　　　　});
 };
 </script>
 
