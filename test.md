@@ -125,3 +125,4 @@ window.onload = () => {
   <button type="button" id="shutter">シャッター</button>
 </form>
 <input id="save" type="button" value="save">
+<input type="text" value="" readonly>
