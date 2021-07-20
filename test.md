@@ -90,13 +90,10 @@ window.onload = () => {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     // save
     var jpeg = canvas.toDataURL("image/jpeg")       // JPEG
-    var bin = atob(jpeg.split(',')[1]);
-    var buffer = new Uint8Array(bin.length);
-    for (var i = 0; i < bin.length; i++) {
-        buffer[i] = bin.charCodeAt(i);
-    }
-    var blob = new Blob([buffer.buffer], {type: "image/jpeg"});
-    navigator.msSaveBlob(blob, "canvas.jpg" );
+    var download = $("<a></a>").appendTo("body").css("display","none");
+    download.prop({"href" : jpeg, "download": "canvas.jpg" });
+    download.get(0).click();
+    download.remove();
   });
 };
 </script>
