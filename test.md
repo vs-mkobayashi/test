@@ -49,6 +49,7 @@
 <h> test </h>
 <input type="button" value="button" onclick="buttonClick()">
 <input type="button" value="button2" onclick="button2Click()">
+<input type="file" accept="image/*;capture=camera">
 <video id="local_video" autoplay playsinline>
     <source>
 </video>
