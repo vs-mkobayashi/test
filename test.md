@@ -15,7 +15,8 @@
     // video要素にMediaStreamを追加する処理。
     function gotLocalMediaStream(mediaStream) {
         localStream = mediaStream;
-	console.log(document.querySelector("video").srcObject);
+	console.log(document.querySelector("video"));
+	console.log(mediaStream);
         localVideo.srcObject = mediaStream;
 	window.alert("button 1　OK");
     }
