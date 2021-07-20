@@ -3,7 +3,7 @@
     // 映像をストリーミングする
     const mediaStreamConstraints = {
         video: true,
-        audio: true
+        audio: false
     };
 
     // ストリームが読み込まれる動画要素
