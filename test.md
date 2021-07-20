@@ -1,6 +1,6 @@
 
 <script type="text/javascript" src="https://serratus.github.io/quaggaJS/examples/js/quagga.js"></script>
-<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
 <style type="text/css">
   #photo-area.viewport {
    height: 240px;
