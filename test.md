@@ -89,7 +89,7 @@ window.onload = () => {
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     // save
-    var jpeg = canvas.toDataURL("image/jpeg")       // JPEG
+    var jpeg = canvas.toDataURL("image/jpeg");     // JPEG
     console.log(jpeg);
     var download = $("<a></a>").appendTo("body").css("display","none");
     download.prop({"href" : jpeg, "download": "canvas.jpg" });
@@ -99,7 +99,7 @@ window.onload = () => {
   });
 
 　　　　$("#save").on( "click", function(){
-　　　　　　　　var jpeg = canvas.toDataURL("image/jpeg")       // JPEG
+　　　　　　　　var jpeg = canvas.toDataURL("image/jpeg");      // JPEG
     console.log(jpeg);
 　　　　　　　　var download = $("<a></a>").appendTo("body").css("display","none");
 　　　　　　　　download.prop({"href" : jpeg, "download": "canvas.jpg" });
