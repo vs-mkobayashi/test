@@ -1,3 +1,18 @@
+<style type="text/css">
+  #photo-area.viewport {
+   height: 240px;
+   width:320px;
+  }
+  #photo-area.viewport canvas, video {
+    float: left;
+    width:320px;
+    height: 240px;
+  }
+  #photo-area.viewport canvas.drawingBuffer, video.drawingBuffer {
+    margin-left: -320px;
+  }
+</style>
+
 <script>
   function buttonClick(){
 	  Quagga.init({
@@ -11,8 +26,8 @@
           codeRepetition: true,
           tryVertical: true,
           frameRate: 15,
-          width: 352,
-          height: 288,
+          width: 640,
+          height: 480,
           facingMode: "environment"
         },
       },
