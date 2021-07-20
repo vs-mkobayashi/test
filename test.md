@@ -7,7 +7,7 @@
     };
 
     // ストリームが読み込まれる動画要素
-    const localVideo = document.querySelector("video");
+    const localVideo = document.getElementById('local_video');
 
     // 動画で再生されるlocalStream。
     let localStream;
@@ -54,4 +54,4 @@
 <h> test </h>
 <input type="button" value="button" onclick="buttonClick()">
 <input type="button" value="button2" onclick="button2Click()">
-<video autoplay playsinline></video>
+<video id="local_video" autoplay playsinline></video>
