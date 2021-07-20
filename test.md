@@ -1,3 +1,6 @@
+
+<script type="text/javascript" src="https://serratus.github.io/quaggaJS/examples/js/quagga.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
 <style type="text/css">
   #photo-area.viewport {
    height: 240px;
@@ -104,8 +107,6 @@ const startScanner = () => {
     });
   }
 </script>
-<script type="text/javascript" src="https://serratus.github.io/quaggaJS/examples/js/quagga.js"></script>
-<script src="http://code.jquery.com/jquery.min.js"></script>
 
 <h> barcode reader </h>
 <div id="photo-area" class="viewport"></div>
