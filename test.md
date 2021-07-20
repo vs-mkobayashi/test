@@ -6,18 +6,13 @@
         audio: false
     };
 
-    // ストリームが読み込まれる動画要素
-    const localVideo = document.getElementById('local_video');
-
     // 動画で再生されるlocalStream。
     let localStream;
 
     // video要素にMediaStreamを追加する処理。
     function gotLocalMediaStream(mediaStream) {
-        localStream = mediaStream;
 	console.log(document.querySelector("video"));
-	console.log(mediaStream);
-        localVideo.src = localStream;
+        document.getElementById('local_video').srcObject = mediaStream;
 	window.alert("button 1　OK");
     }
 
