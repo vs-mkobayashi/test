@@ -54,4 +54,6 @@
 <h> test </h>
 <input type="button" value="button" onclick="buttonClick()">
 <input type="button" value="button2" onclick="button2Click()">
-<video id="local_video" src="" autoplay playsinline></video>
+<video id="local_video" autoplay playsinline>
+    <source>
+</video>
