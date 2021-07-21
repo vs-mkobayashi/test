@@ -97,7 +97,6 @@ const startScanner = () => {
     //barcode read call back
     Quagga.onDetected(function (result) {
         detected_code = result.codeResult.code;
-        console.log(detected_code + ": " + result_codes[detected_code]);
         if(result_codes[detected_code] > 2){
           document.getElementById("scaned_code").value = detected_code;
           Quagga.stop();
@@ -107,6 +106,7 @@ const startScanner = () => {
         }else{
           result_codes[detected_code] += 1;
         }
+        console.log(detected_code + ": " + result_codes[detected_code]);
     });
   }
 </script>
