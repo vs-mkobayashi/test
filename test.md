@@ -48,6 +48,8 @@ const startScanner = () => {
 
         // Set flag to is running
         _scannerIsRunning = true;
+  
+        result_codes = {};
     });
 
     Quagga.onProcessed(function (result) {
@@ -96,9 +98,6 @@ const startScanner = () => {
     Quagga.onDetected(function (result) {
         detected_code = result.codeResult.code;
         console.log(detected_code);
-        if(!result_codes){
-          result_codes = {};
-        }
         if(result_codes[detected_code] > 2){
           document.getElementById("scaned_code").value = detected_code;
           this.Quagga.stop();
