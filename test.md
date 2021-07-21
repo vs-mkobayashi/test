@@ -98,8 +98,6 @@ const startScanner = () => {
     Quagga.onDetected(function (result) {
         detected_code = result.codeResult.code;
         if(result_codes[detected_code] > 2){
-          canvas = document.querySelector("#canvas");
-          canvas.setAttribute("src", Quagga.canvas.dom.image.toDataURL());
           document.getElementById("scaned_code").value = detected_code;
           Quagga.stop();
         }
@@ -115,7 +113,5 @@ const startScanner = () => {
 
 <h> barcode reader </h>
 <div id="photo-area" class="viewport"></div>
-<canvas id="canvas" width="400" height="300"></canvas>
 
-<video id="camera" width="300" height="200"></video>
 code: <input id="scaned_code" type="text" value="" readonly>
