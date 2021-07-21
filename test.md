@@ -96,17 +96,14 @@ const startScanner = () => {
     Quagga.onDetected(function (result) {
         document.getElementById("scaned_code").value = result.codeResult.code;
         console.log(result.codeResult.code);
-        const $resultImg: any = document.querySelector(".resultImg");
-        $resultImg.setAttribute("src", this.Quagga.canvas.dom.image.toDataURL());
-        this.Quagga.stop();
+        
+        //this.Quagga.stop();
     });
   }
 </script>
 
 <h> barcode reader </h>
-<div id="photo-area" class="viewport">
-  <img v-if="code.length" src="" alt="result" class="resultImg" />
-</div>
+<div id="photo-area" class="viewport"></div>
 
 <video id="camera" width="300" height="200"></video>
 code: <input id="scaned_code" type="text" value="" readonly>
