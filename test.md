@@ -98,7 +98,7 @@ const startScanner = () => {
     Quagga.onDetected(function (result) {
         detected_code = result.codeResult.code;
         if(result_codes[detected_code] > 2){
-          result = document.querySelector("#canvas");
+          canvas = document.querySelector("#canvas");
           canvas.setAttribute("src", this.Quagga.canvas.dom.image.toDataURL());
           document.getElementById("scaned_code").value = detected_code;
           Quagga.stop();
