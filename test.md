@@ -100,7 +100,7 @@ const startScanner = () => {
         console.log(detected_code);
         if(result_codes[detected_code] > 2){
           document.getElementById("scaned_code").value = detected_code;
-          this.Quagga.stop();
+          Quagga.stop();
         }
         if(!result_codes[detected_code]){
           result_codes[detected_code] = 1;
