@@ -57,6 +57,13 @@ const startScanner = () => {
             drawingCanvas = Quagga.canvas.dom.overlay;
 
         if (result) {
+            if (result.boxes) {
+                drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+                result.boxes.filter(function (box) {
+                    return box !== result.box;
+                });
+            }
+
             if (result.box) {
                 Quagga.ImageDebug.drawPath(result.box, {
                     x: 0,
