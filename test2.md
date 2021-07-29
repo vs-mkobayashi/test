@@ -7,8 +7,7 @@ window.onload = () => {
     video: {
       width: 300,
       height: 200,
-      facingMode: "user"   // PC で確認用にフロントカメラを利用する
-      // facingMode: { exact: "environment" }  // リアカメラを利用する場合
+      facingMode: { exact: "environment" }
     }
   };
   /**
