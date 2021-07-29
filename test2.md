@@ -1,6 +1,7 @@
 
 <video id="video" autoplay playsinline></video>
 <button id="start">start camera</button>
+
 <script>
 'use strict';
 
