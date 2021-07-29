@@ -2,9 +2,8 @@
 <script>
   const video = document.getElementById("video")
   navigator.mediaDevices.getUserMedia({
-    video: true,
+    video: { facingMode: "environment" },
     audio: false,
-    facingMode: "environment",
   }).then(stream => {
     video.srcObject = stream;
     video.play()
