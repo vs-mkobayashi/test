@@ -1,8 +1,4 @@
-<html>
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
+
 <video id="video" autoplay playsinline></video>
 <button id="start">start camera</button>
 <script>
@@ -43,5 +39,3 @@ document.querySelector('#start').addEventListener('click', function(e){
     init(e);
 }); 
 </script>
-</body>
-</html>
