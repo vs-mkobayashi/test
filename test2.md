@@ -1,33 +1,17 @@
 <script>
+'use strict';
 window.onload = () => {
-  const video  = document.querySelector("#camera");
-  /** カメラ設定 */
-  const constraints = {
-    audio: false,
-    video: {
-      width: 300,
-      height: 200,
-      facingMode: { exact: "environment" }
-    }
-  };
-  /**
-   * カメラを<video>と同期
-   */
-  navigator.mediaDevices.getUserMedia(constraints)
-  .then( (stream) => {
-    video.srcObject = stream;
-    video.onloadedmetadata = (e) => {
-      video.play();
-    };
-  })
-  .catch( (err) => {
-    console.log(err.name + ": " + err.message);
-  });
+  const stream = await navigator.mediaDevices.getUserMedia({
+        audio: false,  // オーディオデバイスは使用しない
+        video: true // デフォルトのカメラデバイスを使用する
+    });
+  const video = document.querySelector('video');
+  video.srcObject = stream;
 };
 </script>
 
 <html>
   <body>
-    <video id="camera" width="300" height="200"></video>
+    <video id="video" autoplay playsinline></video>
   </body>
 </html>
