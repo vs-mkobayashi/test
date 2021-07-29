@@ -4,6 +4,7 @@
   navigator.mediaDevices.getUserMedia({
     video: true,
     audio: false,
+    facingMode: "environment",
   }).then(stream => {
     video.srcObject = stream;
     video.play()
